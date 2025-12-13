@@ -1,8 +1,8 @@
 Detta är ett av mina första ordentliga Projekt!
 
-# 🎮 Naoar1556 – Officiell Hemsida
+# 🎮 Naoar1556 – Officiella Hemsida
 
-Detta är den officiella hemsidan för **Naoar**, byggd för att visa upp streams, innehåll och community på ett stilrent och modernt sätt.
+Detta ärhemsidan för **Naoar**, byggd för att visa upp streams, innehåll och community på ett stilrent och modernt sätt.
 
 🌐 **Live-demo (GitHub Pages):**  
 https://mrlinus1556.github.io/Naoar-Hemsida2.0/
