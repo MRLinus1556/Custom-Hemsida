@@ -37,11 +37,15 @@ https://mrlinus1556.github.io/Naoar-Hemsida2.0/
 
 📦 projektet
 ├── index.html # Startsida
+
 ├── om.html # Om Naoar
+
 ├── schema.html # Stream-schema
+
 ├── innehall.html # YouTube / clips
+
 ├── samarbeten.html # Samarbeten
-├── favicon.png # Favicon
+
 └── README.md
 
 ## ▶️ YouTube-videos (viktigt)
