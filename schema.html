@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NAOAR | Schema</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-main: #050D1A;
+      --bg-card: rgba(10, 26, 47, 0.85);
+      --accent: #1E90FF;
+      --text-main: #FFFFFF;
+      --text-muted: #B8C4D9;
+      --border-glow: rgba(30, 144, 255, 0.35);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top, rgba(30,144,255,0.15), transparent 40%),
+        radial-gradient(circle at bottom, rgba(30,144,255,0.08), transparent 45%),
+        linear-gradient(180deg, #050D1A, #02070F);
+      color: var(--text-main);
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(5, 13, 26, 0.85);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .navbar {
+      max-width: 1300px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 32px;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 60px;
+      width: auto;
+      margin-right: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 26px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: var(--text-main);
+      font-size: 0.9rem;
+      opacity: 0.85;
+    }
+
+    nav ul li a.active,
+    nav ul li a:hover {
+      opacity: 1;
+      color: var(--accent);
+    }
+
+    .live-btn {
+      background: linear-gradient(135deg, #1E90FF, #3AA0FF);
+      color: white;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.85rem;
+      box-shadow: 0 0 20px rgba(30,144,255,0.4);
+    }
+
+    /* ===== LAYOUT ===== */
+    main {
+      display: flex;
+      justify-content: center;
+      padding: 100px 24px;
+    }
+
+    .content-wrapper {
+      width: 100%;
+      max-width: 1100px;
+      background: var(--bg-card);
+      border-radius: 20px;
+      padding: 80px 64px;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow:
+        0 0 0 1px var(--border-glow),
+        0 40px 80px rgba(0,0,0,0.6);
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 14px;
+    }
+
+    .hero p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    /* ===== NEXT STREAM ===== */
+    .next-stream {
+      margin: 40px auto 60px;
+      text-align: center;
+      padding: 26px;
+      border-radius: 16px;
+      background: rgba(5,13,26,0.85);
+      border: 1px solid rgba(30,144,255,0.45);
+      box-shadow: 0 0 30px rgba(30,144,255,0.25);
+    }
+
+    .next-stream h2 {
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .next-stream span {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    /* ===== SCHEDULE ===== */
+    .schedule-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
+    }
+
+    .day-card {
+      background: rgba(5, 13, 26, 0.8);
+      padding: 26px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .day-card h3 {
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .time {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .details {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .off {
+      opacity: 0.55;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 900px) {
+      .content-wrapper { padding: 60px 32px; }
+      nav ul { display: none; }
+    }
+  </style>
+</head>
+<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.discordapp.com/attachments/1255190639931293798/1449209277867753492/Untitled_design-removebg-preview.png?ex=693e10d0&is=693cbf50&hm=cd5041dda7041d594a44dba4158640fb4329b4b33dc32c0c8cf45a98e3fa269e&">
+<body>
+
+<header>
+  <div class="navbar">
+    <div class="logo">
+      <img src="https://cdn.discordapp.com/attachments/1255190639931293798/1449209277867753492/Untitled_design-removebg-preview.png?ex=693e10d0&is=693cbf50&hm=cd5041dda7041d594a44dba4158640fb4329b4b33dc32c0c8cf45a98e3fa269e&" alt="Naoar Logga">
+      NAOAR
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="om.html">Om</a></li>
+        <li><a href="schema.html" class="active">Schema</a></li>        
+        <li><a href="innehall.html">Innehåll</a></li>  
+        <li><a href="samarbeten.html">Samarbeten</a></li>        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="content-wrapper">
+    <section class="hero">
+      <h1>Schema</h1>
+      <p>Tider anpassas automatiskt efter din tidszon</p>
+    </section>
+
+    <div class="next-stream" id="nextStream">
+      <h2>Nästa stream</h2>
+      <span>Laddar...</span>
+    </div>
+
+    <section class="schedule-grid" id="schedule"></section>
+  </div>
+</main>
+
+<footer>
+  © 2025 Naoar1556. Alla rättigheter förbehållna.
+</footer>
+
+<script>
+  const scheduleData = [
+    { day: 'Måndag', time: '19:00', game: '🎮 Variety' },
+    { day: 'Onsdag', time: '19:00', game: '🔥 Main Game' },
+    { day: 'Fredag', time: '20:00', game: '👥 Community Night' }
+  ];
+
+  const days = ['Söndag','Måndag','Tisdag','Onsdag','Torsdag','Fredag','Lördag'];
+  const scheduleEl = document.getElementById('schedule');
+  const nextStreamText = document.querySelector('#nextStream span');
+  const now = new Date();
+  let nextStream = null;
+
+  scheduleData.forEach(entry => {
+    const card = document.createElement('div');
+    card.className = 'day-card';
+    card.innerHTML = `
+      <h3>${entry.day}</h3>
+      <div class="time">${entry.time}</div>
+      <div class="details">${entry.game}</div>
+    `;
+    scheduleEl.appendChild(card);
+
+    const streamDate = new Date();
+    const targetDay = days.indexOf(entry.day);
+    const diff = (targetDay + 7 - now.getDay()) % 7;
+    streamDate.setDate(now.getDate() + diff);
+
+    const [h, m] = entry.time.split(':');
+    streamDate.setHours(h, m, 0, 0);
+
+    if (streamDate < now) streamDate.setDate(streamDate.getDate() + 7);
+
+    if (!nextStream || streamDate < nextStream.date) {
+      nextStream = { ...entry, date: streamDate };
+    }
+  });
+
+  if (nextStream) {
+    nextStreamText.textContent = `${nextStream.day} kl ${nextStream.time} ${nextStream.game}`;
+  } else {
+    nextStreamText.textContent = 'Inga streams planerade';
+  }
+</script>
+
+</body>
+</html>
