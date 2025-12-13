@@ -7,7 +7,7 @@
 Detta ärhemsidan för **Naoar**, byggd för att visa upp streams, innehåll och community på ett stilrent och modernt sätt.
 
 🌐 **Live-demo (GitHub Pages):**  
-https://mrlinus1556.github.io/Naoar-Hemsida2.0/
+https://mrlinus1556.github.io/Custom-Hemsida/index.html
 
 ---
 
