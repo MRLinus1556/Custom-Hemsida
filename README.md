@@ -1,1 +1,51 @@
-Detta är endast för att testa mig fram :)
+Detta är ett av mina första ordentliga Projekt!
+
+# 🎮 Naoar1556 – Officiell Hemsida
+
+Detta är den officiella hemsidan för **Naoar**, byggd för att visa upp streams, innehåll och community på ett stilrent och modernt sätt.
+
+🌐 **Live-demo (GitHub Pages):**  
+https://mrlinus1556.github.io/Naoar-Hemsida2.0/
+
+---
+
+## ✨ Funktioner
+
+- 🔥 Modern design (HTML + CSS)
+- 📺 Inbäddade YouTube-videos
+- 🎥 Fokus på Twitch, YouTube & TikTok
+- 🧭 Navigering mellan flera sidor:
+  - Home
+  - Om
+  - Schema
+  - Innehåll
+  - Samarbeten
+- 📱 Fullt responsiv (mobil & desktop)
+- 🚀 Hostad gratis via **GitHub Pages**
+
+---
+
+## 🛠️ Tekniker
+
+- **HTML5**
+- **CSS3**
+- **Google Fonts (Inter)**
+- **YouTube Embed Player**
+- **GitHub Pages**
+
+---
+
+## 📂 Projektstruktur
+Naoar-Hemsida2.0/
+│── index.html # Home
+│── om.html # Om Naoar
+│── schema.html # Stream-schema
+│── innehall.html # Videos & clips
+│── samarbeten.html # Samarbeten
+│── README.md
+
+## ▶️ YouTube-videos (viktigt)
+
+För att videos ska fungera korrekt:
+- Sidan **måste köras via https**
+- Lokala filer (`file:///`) kan ge **Fel 153**
