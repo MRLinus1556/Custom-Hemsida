@@ -1,6 +1,8 @@
-Detta är ett av mina första ordentliga Projekt!
+## *Detta är ett av mina första ordentliga Projekt!*
 
-# 🎮 Naoar1556 – Officiella Hemsida
+---
+
+# 🎮 Streamer Hemsida!
 
 Detta ärhemsidan för **Naoar**, byggd för att visa upp streams, innehåll och community på ett stilrent och modernt sätt.
 
@@ -39,7 +41,7 @@ https://mrlinus1556.github.io/Naoar-Hemsida2.0/
 
 ├── index.html # Startsida
 
-├── om.html # Om Naoar
+├── om.html # Om Streamern!
 
 ├── schema.html # Stream-schema
 
